@@ -1,0 +1,31 @@
+<script type="text/javascript">
+    RED.nodes.registerType('click', {
+        category: 'nuimo',
+        color: '#a6bbcf',
+        defaults: {
+            name: { value: "" },
+            device: { value: "", type: "device" }
+        },
+        inputs: 0,
+        outputs: 1,
+        icon: "arrow-in.png",
+        label: function () {
+            return this.name || "click";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="click">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-device"><i class="icon-tag"></i> Device</label>
+        <select id="node-input-device">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="click">
+    <p>Emits events when the nuimo button is pressed</p>
+</script>

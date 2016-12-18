@@ -1,0 +1,31 @@
+<script type="text/javascript">
+    RED.nodes.registerType('write-leds', {
+        category: 'nuimo',
+        color: '#a6bbcf',
+        defaults: {
+            name: { value: "" },
+            device: { value: "", type: "device" }
+        },
+        inputs: 1,
+        outputs: 0,
+        icon: "arrow-in.png",
+        label: function () {
+            return this.name || "write leds";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="write-leds">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-device"><i class="icon-tag"></i> Device</label>
+        <select id="node-input-device">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="write-leds">
+    <p>Emits events when the nuimo is rotated</p>
+</script>
