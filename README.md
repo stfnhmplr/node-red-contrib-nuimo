@@ -5,6 +5,7 @@ Adds input nodes to handle the following:
 - Swipe
 - Button Click
 - Rotation
+
 Adds output node to handle:
 - Writing to 9x9 LEDs
 
